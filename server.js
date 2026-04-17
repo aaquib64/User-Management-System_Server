@@ -15,11 +15,13 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://usermanagementsystm.netlify.app/login",
+      "https://usermanagementsystm.netlify.app",
     ],
     credentials: true,
   }),
 );
+
+app.options("*", cors());
 
 app.use(express.json());
 
